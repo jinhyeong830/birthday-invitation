@@ -24,3 +24,4 @@ router.all("/*", (req, res, next) => {
 /* party table 접근 */
 router.get("/party", controller.get_partyInfo);
 router.post("/party/detail", controller.post_partyInfo);
+module.exports = router;
