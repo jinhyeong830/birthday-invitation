@@ -1,7 +1,7 @@
 const { MongoClient, ServerApiVersion } = require("mongodb");
 
-const DB_URI = "";
-const DB_URI_ATLAS = "";
+// const DB_URI = "";
+const DB_URI_ATLAS = `mongodb+srv://${process.env.ATLAS_ID}:${process.env.ATLAS_PW}@invitations.cd3oa16.mongodb.net/?retryWrites=true&w=majority`;
 
 const uri = DB_URI_ATLAS;
 
@@ -11,4 +11,17 @@ const client = new MongoClient(uri, {
   serverApi: ServerApiVersion.v1,
 });
 
+// async function run() {
+//   try {
+//     // Connect the client to the server	(optional starting in v4.7)
+//     await client.connect();
+//     // Send a ping to confirm a successful connection
+//     await client.db("admin").command({ ping: 1 });
+//     console.log("Pinged your deployment. You successfully connected to MongoDB!");
+//   } finally {
+//     // Ensures that the client will close when you finish/error
+//     await client.close();
+//   }
+// }
+// run().catch(console.dir);
 module.exports = client;
