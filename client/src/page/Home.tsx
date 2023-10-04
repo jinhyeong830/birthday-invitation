@@ -1,5 +1,5 @@
-import PartyInfo from "../components/main/PartyInfo";
 import InfoModal from "../components/main/InfoModal";
+import PartyDeco from "../components/main/PartyDeco";
 import Navigation from "../components/Navigation";
 
 function Home() {
@@ -7,7 +7,7 @@ function Home() {
     <>
       <Navigation />
       <InfoModal />
-      <PartyInfo />
+      <PartyDeco />
     </>
   );
 }
