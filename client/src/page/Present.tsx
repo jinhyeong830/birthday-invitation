@@ -1,3 +1,4 @@
+import PresentInfoModal from "../components/present-list/PresentInfoModal";
 import PresentList from "../components/present-list/PresentList";
 import styled from "styled-components";
 
@@ -17,6 +18,7 @@ export default function Present() {
         </p>
       </PresentDesc>
       <PresentList />
+      <PresentInfoModal />
     </>
   );
 }

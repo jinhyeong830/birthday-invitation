@@ -11,6 +11,10 @@ const PresentImg = styled.img`
 `;
 const ImageBox = styled.div`
   /* border: 2px solid red; */
+  filter: brightness(0.7);
+  &:hover {
+    filter: brightness(100%);
+  }
 `;
 const IconBox = styled.div`
   width: 50%;
@@ -25,6 +29,15 @@ const IconBox = styled.div`
     cursor: pointer;
   }
 `;
+
+const FirstGlass = () => {
+  if (window.confirm("선물 하시겠습니까??")) {
+    alert("감사합니다❤️");
+  } else {
+    alert("다음 기회에~👌");
+  }
+};
+
 interface Props {
   presentSrc: string;
 }
@@ -36,7 +49,7 @@ export default function PresentItem({ presentSrc }: Props) {
       </ImageBox>
       <div className="d-flex w-100">
         <IconBox className="left-box">
-          <FontAwesomeIcon icon={faMagnifyingGlass} />
+          <FontAwesomeIcon icon={faMagnifyingGlass} onClick={FirstGlass} />
         </IconBox>
         <IconBox>
           <FontAwesomeIcon icon={faGift} />
