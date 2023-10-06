@@ -3,12 +3,15 @@ import styled from "styled-components";
 
 const CardContainer = styled.div`
   position: relative;
+  border: 1px solid green;
   width: 100%;
-  bottom: 100px;
+  text-align: center;
+  bottom: 50px;
 `;
 
 const Img = styled.img`
-  width: 100%;
+  width: 480px;
+  height: 280px;
 `;
 const Title = styled.h1`
   font-size: 40px;
