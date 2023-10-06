@@ -15,6 +15,7 @@ font-style: normal;
 }
 
   body {
+  font-family: "UhBeenamsoyoung";
   }
   
   *{
