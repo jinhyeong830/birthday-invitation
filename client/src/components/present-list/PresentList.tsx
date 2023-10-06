@@ -3,12 +3,13 @@ import PresentItem from "./PresentItem";
 
 const PresentContainer = styled.div`
   display: grid;
-  background-color: aqua;
+  /* background-color: aqua; */
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 20px;
   width: 700px;
   margin: auto;
 `;
+
 export default function PresentList() {
   const imgArr = [
     { imgSrc: "/assets/그로밋코스터.webp" },
