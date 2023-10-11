@@ -30,7 +30,7 @@ const IconBox = styled.div`
   }
 `;
 
-const FirstGlass = () => {
+const FirstGift = () => {
   if (window.confirm("선물 하시겠습니까??")) {
     alert("감사합니다❤️");
   } else {
@@ -40,8 +40,9 @@ const FirstGlass = () => {
 
 interface Props {
   presentSrc: string;
+  setState: React.Dispatch<React.SetStateAction<boolean>>;
 }
-export default function PresentItem({ presentSrc }: Props) {
+export default function PresentItem({ presentSrc, setState }: Props) {
   return (
     <PresentContainer>
       <ImageBox>
@@ -49,10 +50,13 @@ export default function PresentItem({ presentSrc }: Props) {
       </ImageBox>
       <div className="d-flex w-100">
         <IconBox className="left-box">
-          <FontAwesomeIcon icon={faMagnifyingGlass} onClick={FirstGlass} />
+          <FontAwesomeIcon
+            icon={faMagnifyingGlass}
+            onClick={() => setState(true)}
+          />
         </IconBox>
         <IconBox>
-          <FontAwesomeIcon icon={faGift} />
+          <FontAwesomeIcon icon={faGift} onClick={FirstGift} />
         </IconBox>
       </div>
     </PresentContainer>

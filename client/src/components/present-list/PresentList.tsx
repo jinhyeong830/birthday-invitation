@@ -9,8 +9,10 @@ const PresentContainer = styled.div`
   width: 700px;
   margin: auto;
 `;
-
-export default function PresentList() {
+interface Props {
+  setState: React.Dispatch<React.SetStateAction<boolean>>;
+}
+export default function PresentList({ setState }: Props) {
   const imgArr = [
     { imgSrc: "/assets/그로밋코스터.webp" },
     { imgSrc: "/assets/다이슨에어랩.webp" },
@@ -27,7 +29,7 @@ export default function PresentList() {
   return (
     <PresentContainer>
       {imgArr.map((el) => {
-        return <PresentItem presentSrc={el.imgSrc} />;
+        return <PresentItem presentSrc={el.imgSrc} setState={setState} />;
       })}
     </PresentContainer>
   );
