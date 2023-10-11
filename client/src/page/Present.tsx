@@ -1,12 +1,15 @@
 import PresentInfoModal from "../components/present-list/PresentInfoModal";
 import PresentList from "../components/present-list/PresentList";
 import styled from "styled-components";
+import { useState } from "react";
 
 const PresentDesc = styled.div`
   font-family: "UhBeenamsoyoung";
   text-align: center;
 `;
+
 export default function Present() {
+  const [modal, setModal] = useState<boolean>(false);
   return (
     <>
       <PresentDesc>
@@ -17,8 +20,8 @@ export default function Present() {
           아래 선물버튼을 눌러 메시지 보내주세욤😘
         </p>
       </PresentDesc>
-      <PresentList />
-      <PresentInfoModal />
+      <PresentList setState={setModal} />
+      {modal && <PresentInfoModal />}
     </>
   );
 }
